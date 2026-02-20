@@ -1,0 +1,1294 @@
+#base items_game.txt
+
+"items_game"
+{	
+	"prefabs"
+	{
+		"weapon_sword"
+		{
+			"enabled"	"1"
+			"item_class"	"tf_weapon_sword"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Sword"
+			"item_slot"	"melee"
+			"anim_slot"	"item1"
+			"item_quality"	"normal"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attach_to_hands"	"1"
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_MELEE_VM_INSPECT_START"	"ACT_SPECIAL_VM_INSPECT_START"
+					"ACT_MELEE_VM_INSPECT_IDLE"		"ACT_SPECIAL_VM_INSPECT_IDLE"
+					"ACT_MELEE_VM_INSPECT_END"		"ACT_SPECIAL_VM_INSPECT_END"
+				}
+			}
+		}
+		"weapon_baseflamethrower"
+		{
+			"item_class"	"tf_weapon_flamethrower"
+			"prefab"		"weapon_newflame"
+			"item_type_name"	"#TF_Weapon_FlameThrower"
+			"item_slot"	"primary"
+			"used_by_classes"
+			{
+				"pyro"	"1"
+			}
+			"static_attrs"
+			{
+				"extinguish restores health"			"20"
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_MP_ATTACK_CROUCH_SECONDARYFIRE"	"ACT_MP_ATTACK_CROUCH_PRIMARY_ALT"
+					"ACT_MP_ATTACK_STAND_SECONDARYFIRE"		"ACT_MP_ATTACK_STAND_PRIMARY_ALT"
+					"ACT_MP_ATTACK_SWIM_SECONDARYFIRE"		"ACT_MP_ATTACK_SWIM_PRIMARY_ALT"
+				}
+			}
+		}
+		"weapon_newflame"
+		{
+			"static_attrs"
+			{
+				"flame_gravity"							"0"
+				"flame_drag"							"8.5"
+				"flame_up_speed"						"50"
+				"flame_speed"							"2450"
+				"flame_spread_degree"					"2.8"
+				"flame_lifetime"						"0.6"
+				"flame_random_life_time_offset"			"0.1"
+			}
+		}
+		"weapon_lunchbox"
+		{
+			"enabled"	"1"
+			"item_class"	"tf_weapon_lunchbox"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_LunchBox"
+			"item_slot"	"secondary"
+			"anim_slot"	"ITEM1"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"item_quality"	"normal"
+			"attach_to_hands"	"1"
+
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_SECONDARY_VM_INSPECT_START"	"ACT_ITEM1_VM_INSPECT_START"
+					"ACT_SECONDARY_VM_INSPECT_IDLE"		"ACT_ITEM1_VM_INSPECT_IDLE"
+					"ACT_SECONDARY_VM_INSPECT_END"		"ACT_ITEM1_VM_INSPECT_END"
+				}
+			}
+
+			"mouse_pressed_sound"	"ui/item_sandwich_drop.wav"
+			"drop_sound"		"ui/item_sandwich_pickup.wav"
+		}
+		"weapon_melee_allclass"
+		{
+			"base_item_name"	"Frying Pan"
+
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_MELEE_VM_INSPECT_START"	"ACT_MELEE_ALLCLASS_VM_INSPECT_START"
+					"ACT_MELEE_VM_INSPECT_IDLE"		"ACT_MELEE_ALLCLASS_VM_INSPECT_IDLE"
+					"ACT_MELEE_VM_INSPECT_END"		"ACT_MELEE_ALLCLASS_VM_INSPECT_END"
+				}
+			}
+		}
+		"weapon_sniperrifle_alt1"
+		{
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_PRIMARY_VM_INSPECT_START"	"ACT_PRIMARY_ALT1_VM_INSPECT_START"
+					"ACT_PRIMARY_VM_INSPECT_IDLE"	"ACT_PRIMARY_ALT1_VM_INSPECT_IDLE"
+					"ACT_PRIMARY_VM_INSPECT_END"	"ACT_PRIMARY_ALT1_VM_INSPECT_END"
+				}
+			}
+		}
+		"weapon_sniperrifle"
+		{
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_headshot"				"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"TF_WEAPON_SNIPERRIFLE"
+			"inspect_panel_dist" "71"
+			"enabled"	"1"
+			"item_class"	"tf_weapon_sniperrifle"
+			"item_type_name"	"#TF_Weapon_SniperRifle"
+			"item_name"	"#TF_Weapon_SniperRifle"
+			"item_slot"	"primary"
+			"item_quality"	"normal"
+			"image_inventory"	"backpack/weapons/w_models/w_sniperrifle"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attach_to_hands" "1"
+			"model_player"	"models/weapons/c_models/c_sniperrifle/c_sniperrifle.mdl"
+			"used_by_classes"
+			{
+				"sniper"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -10"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"particle_suffix"		"sniperrifle"
+		}
+		"weapon_spy_knife_item2"
+		{
+			"enabled"	"1"
+			"item_class"	"tf_weapon_knife"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Knife"
+			"item_slot"	"melee"
+			"item_quality"	"normal"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attach_to_hands" "1"
+			"used_by_classes"
+			{
+				"spy"	"1"
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_VM_DRAW"	"ACT_ITEM2_VM_DRAW"
+					"ACT_VM_IDLE"	"ACT_ITEM2_VM_IDLE"
+					"ACT_VM_HITCENTER"	"ACT_ITEM2_VM_HITCENTER"
+					"ACT_VM_SWINGHARD"	"ACT_ITEM2_VM_SWINGHARD"
+					"ACT_BACKSTAB_VM_UP"	"ACT_ITEM2_BACKSTAB_VM_UP"
+					"ACT_BACKSTAB_VM_DOWN"	"ACT_ITEM2_BACKSTAB_VM_DOWN"
+					"ACT_BACKSTAB_VM_IDLE"	"ACT_ITEM2_BACKSTAB_VM_IDLE"
+					"ACT_MELEE_VM_STUN"	"ACT_MELEE_VM_ITEM2_STUN"
+					"ACT_MELEE_VM_INSPECT_START"	"ACT_ITEM2_VM_INSPECT_START"
+					"ACT_MELEE_VM_INSPECT_IDLE"		"ACT_ITEM2_VM_INSPECT_IDLE"
+					"ACT_MELEE_VM_INSPECT_END"		"ACT_ITEM2_VM_INSPECT_END"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_knife_small_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+			
+		}
+		"weapon_red_tape_recorder"
+		{
+			"base_item_name"	"The Red-Tape Recorder"
+			"enabled"	"0"
+			"item_class"	"tf_weapon_sapper"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Spy_Sapper"
+			"item_name"	"#TF_SD_Sapper"
+			"item_slot"	"building"
+			"item_quality"	"normal"
+			"item_logname"	"recorder"
+			"item_iconname"	"recorder"
+			"image_inventory"	"backpack/workshop_partner/weapons/c_models/c_sd_sapper/c_sd_sapper"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"25"
+			"anim_slot"	"building"
+			"attach_to_hands"	"0"
+			"propername"	"1"
+			"attach_to_hands"	"1"
+			"model_player"	"models/workshop_partner/weapons/c_models/c_sd_sapper/c_sd_sapper.mdl"
+			"xifier_class_remap"	"red_tape_recorder"
+			"used_by_classes"
+			{
+				"spy"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"5 -2 -4"
+			}
+			"attributes"
+			{
+				"kill eater score type"
+				{
+					"attribute_class"	"kill_eater_score_type"
+					"value"				"24"								
+				}
+				"sapper degenerates buildings"
+				{
+					"attribute_class"	"sapper_degenerates_buildings"
+					"value"	"0.5"
+				}
+				"sapper damage penalty"
+				{
+					"attribute_class"	"mult_sapper_damage"
+					"value" "0.0"
+				}
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_VM_DRAW"			"ACT_ITEM3_VM_DRAW"
+					"ACT_VM_DRAW_DEPLOYED"	"ACT_ITEM3_VM_DRAW"
+					"ACT_VM_IDLE"			"ACT_ITEM3_VM_IDLE"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+		"weapon_gatling_gun"
+		{
+			"enabled"	"1"
+			"item_class"	"tf_weapon_minigun"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Minigun"
+			"item_name"	"#TF_GatlingGun"
+			"item_slot"	"primary"
+			"item_logname"	"brass_beast"
+			"item_iconname"	"brass_beast"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_gatling_gun/c_gatling_gun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/workshop/weapons/c_models/c_gatling_gun/c_gatling_gun.mdl"
+			"attach_to_hands"	"1"
+			"propername"	"1"
+			"item_quality"	"normal"
+			"used_by_classes"
+			{
+				"heavy"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -9"
+			}
+			"visuals"
+			{
+				"sound_reload"	"Weapon_Gatling.Reload"
+				"sound_empty"	"Weapon_Gatling.ClipEmpty"
+				"sound_double_shot"	"Weapon_Gatling.Fire"
+				"sound_special1"	"Weapon_Gatling.WindUp"
+				"sound_special2"	"Weapon_Gatling.WindDown"
+				"sound_special3"	"Weapon_Gatling.Spin"
+				"sound_burst"	"Weapon_Gatling.FireCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.20"
+				}
+				"minigun spinup time increased"
+				{
+					"attribute_class"	"mult_minigun_spinup_time"
+					"value" "1.5"
+				}
+				"aiming movespeed decreased"
+				{
+					"attribute_class"	"mult_player_aiming_movespeed"
+					"value" "0.4"
+				}
+				"spunup_damage_resistance"
+				{
+					"attribute_class"		"spunup_damage_resistance"
+					"value"					"0.80"
+				}
+			}
+		}
+
+	}
+	"items"
+	{
+		"58"
+		{
+			"name"	"Jarate"
+			"enabled"	"1"
+			"item_class"	"tf_weapon_jar"
+			"tags"
+			{
+				"can_extinguish"			"1"
+			}
+			"base_item_name"	"Jarate"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Jar"
+			"item_name"	"#TF_Unique_Achievement_Jar"
+			"item_slot"	"secondary"
+			"item_quality"	"normal"
+			"anim_slot"	"item1"
+			"attach_to_hands"	"1"
+			"image_inventory"	"backpack/weapons/c_models/urinejar"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"22"
+			"model_player"	"models/weapons/c_models/urinejar.mdl"
+			"used_by_classes"
+			{
+				"sniper"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -9"
+			}
+			"attributes"
+			{
+				"jarate description"
+				{
+					"attribute_class"	"desc_jarate_description"
+					"value"	"1"
+				}
+				"kill eater score type"
+				{
+					"attribute_class"	"kill_eater_score_type"
+					"value" 	"4"									
+				}
+				"extinguish reduces cooldown"
+				{
+					"attribute_class" "extinguish_reduces_cooldown"
+					"value" "0.8"
+				}
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_SECONDARY_VM_INSPECT_START"	"ACT_ITEM1_VM_INSPECT_START"
+					"ACT_SECONDARY_VM_INSPECT_IDLE"		"ACT_ITEM1_VM_INSPECT_IDLE"
+					"ACT_SECONDARY_VM_INSPECT_END"		"ACT_ITEM1_VM_INSPECT_END"
+				}
+			}
+			"xifier_class_remap"	"jarate"
+			"mouse_pressed_sound"	"ui/item_bottle_pickup.wav"
+			"drop_sound"		"ui/item_bottle_drop.wav"
+		}
+		"264" // Frying Pan - reskin
+		{
+			"name"	"Frying Pan"
+			"item_class"	"saxxy"
+			"prefab"	"weapon_melee_allclass"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+			}
+			"item_logname"	"fryingpan"
+			"item_iconname"	"fryingpan"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_FryingPan"
+			"item_name"	"#TF_Unique_FryingPan"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/player/items/all_class/all_pan"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_frying_pan/c_frying_pan.mdl"
+			"attach_to_hands"	"1"
+			"inspect_panel_dist" "40"
+			"item_quality"	"normal"
+			"propername"	"1"
+			"anim_slot" "MELEE_ALLCLASS"
+			"xifier_class_remap"	"Frying Pan"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"engineer"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"pyro" "1"
+				"spy" "1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_MP_ATTACK_STAND_MELEE_ALLCLASS"	"ACT_MP_ATTACK_STAND_MELEE"
+					"ACT_MP_ATTACK_CROUCH_MELEE_ALLCLASS"	"ACT_MP_ATTACK_CROUCH_MELEE"
+					"ACT_MP_ATTACK_SWIM_MELEE_ALLCLASS"	"ACT_MP_ATTACK_SWIM_MELEE"
+				}
+				"sound_melee_hit"		"FryingPan.HitFlesh"
+				"sound_melee_hit_world"	"FryingPan.HitWorld"
+				"sound_melee_miss"	"Weapon_Machete.Miss"
+				"sound_burst"		"Weapon_Machete.MissCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+		"1123" // Necro Smasher - reskin
+		{
+			"name"	"Necro Smasher"
+			"item_class"	"saxxy"
+			"prefab"	"weapon_melee_allclass"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_be_festivized"		"1"
+			}
+			"item_logname"	"necro_smasher"
+			"item_iconname"	"necro_smasher"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Hammer"
+			"item_name"	"#TF_Weapon_Necro_Smasher"
+			"item_description"	"#TF_Weapon_Necro_Smasher_Desc"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/weapons/c_models/c_carnival_mallet/c_carnival_mallet"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 				"46"			
+			"model_player"	"models/weapons/c_models/c_carnival_mallet/c_carnival_mallet.mdl"
+			"attach_to_hands"	"1"
+			"item_quality"	"normal"
+			"propername"	"1"
+			"anim_slot" "MELEE_ALLCLASS"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"pyro" "1"
+				"engineer"	"1"
+				"spy" "1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"			"20 4 -20"
+				"inspect_viewmodel_offset" 		"5 0 -3"
+			}
+			"visuals"
+			{
+				"sound_melee_hit_world"	"Weapon_Machete.HitWorld"
+				"sound_melee_miss"	"Weapon_Machete.Miss"
+				"sound_melee_hit"	"Weapon_Machete.HitFlesh"
+				"sound_burst"		"Weapon_Machete.MissCrit"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_carnival_mallet/c_carnival_mallet_festivizer.mdl"
+					}
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+		"1100" // The Bread Bite - reskin + extra_wearable
+		{
+			"name"		"The Bread Bite"
+			"prefab"	"valve weapon_gru"
+			"propername"	"1"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+			}
+			"item_class"	"tf_weapon_fists"
+			"item_name"			"#TF_Weapon_BreadBite"
+			"item_description"	"#TF_Weapon_BreadBite_Desc"
+			"item_slot"	"melee"
+			"item_quality"	"normal"
+			"item_logname"	"bread_bite"
+			"item_iconname"	"bread_bite"
+			"image_inventory"	"backpack/weapons/c_models/c_breadmonster_gloves/c_breadmonster_gloves"
+			"model_player"		"models/weapons/c_models/c_breadmonster_gloves/c_breadmonster_gloves.mdl"
+			"attach_to_hands"	"1"
+			"extra_wearable"	"models/workshop/player/items/all_class/sum20_breadcrab/sum20_breadcrab_heavy.mdl"
+			"used_by_classes"
+			{
+				"heavy"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"15 0 -12"
+			}
+			"hide_bodygroups_deployed_only"	"1"
+			"attributes"
+			{
+				"breadgloves properties"
+				{
+					"attribute_class"	"breadgloves_properties"
+					"value"				"1"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hands"			"1"
+				}
+				"animation_replacement"
+				{
+					"ACT_VM_HITLEFT"		"ACT_BREADGLOVES_VM_HITLEFT"
+					"ACT_VM_HITRIGHT"		"ACT_BREADGLOVES_VM_HITRIGHT"
+					"ACT_VM_SWINGHARD"		"ACT_BREADGLOVES_VM_SWINGHARD"
+					"ACT_VM_IDLE"			"ACT_BREADGLOVES_VM_IDLE"
+					"ACT_VM_DRAW"			"ACT_BREADGLOVES_VM_DRAW"
+					"ACT_MELEE_VM_INSPECT_START"	"ACT_MELEE_ALT2_VM_INSPECT_START"
+					"ACT_MELEE_VM_INSPECT_IDLE"		"ACT_MELEE_ALT2_VM_INSPECT_IDLE"
+					"ACT_MELEE_VM_INSPECT_END"		"ACT_MELEE_ALT2_VM_INSPECT_END"
+				}
+				"sound_deploy"	"Weapon_bm_gloves.draw"
+			}
+			"static_attrs"
+			{
+				"limited quantity item"		"1"
+			}
+			"xifier_class_remap"	""
+			"mouse_pressed_sound"	"ui/item_leather_pickup.wav"
+			"drop_sound"		"ui/item_pack_drop.wav"
+		}
+		"933"
+		{
+			"name"	"The Ap-Sap"
+			"prefab"	"valve"
+			"item_class"	"tf_weapon_sapper"
+			"prefab"	"weapon_sapper"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Spy_Sapper"
+			"item_name"	"#TF_Weapon_Ap_Sap"
+			"item_description"	"#TF_Weapon_Ap_Sap_desc"
+			"item_slot"	"building"
+			"item_quality"	"normal"
+			"item_logname"	"psapper"
+			"item_iconname"	"psapper"
+			"image_inventory"	"backpack/weapons/c_models/c_p2rec/c_p2rec"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"25"
+			"anim_slot"	"building"
+			"attach_to_hands"	"1"
+			"propername"	"1"
+			"model_player"	"models/weapons/c_models/c_p2rec/c_p2rec.mdl"
+			"model_world"	"models/weapons/c_models/c_p2rec/c_p2rec.mdl"
+			"used_by_classes"
+			{
+				"spy"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"				
+			}
+			"attributes"
+			{
+				"sapper voice pak"
+				{
+					"attribute_class"	"sapper_voice_pak"
+					"value" "1.0"
+				}
+				"sapper voice pak idle wait"
+				{
+					"attribute_class"	"sapper_voice_pak_idle_wait"
+					"value" "3.0"
+				}
+			}
+		}
+		"810"
+		{
+			"name"	"The Red-Tape Recorder"
+			"prefab"		"weapon_red_tape_recorder"
+		}
+		"727" // The Black Rose - reskin
+		{
+			"name"			"The Black Rose"
+			"item_class"	"tf_weapon_knife"
+			"prefab"	"weapon_knife"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_taunt_damage"		"1"
+				"can_be_festivized"		"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Knife"
+			"propername"	"1"
+			"item_quality"	"normal"
+			"item_name"			"#TF_BlackRose"
+			"item_description"	"#TF_BlackRose_Desc"
+			"item_slot"	"melee"
+			"item_logname"	"black_rose"
+			"item_iconname"	"black_rose"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_ava_roseknife/c_ava_roseknife_v"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"25"
+			"attach_to_hands" "1"
+			"model_player"		"models/workshop/weapons/c_models/c_ava_roseknife/c_ava_roseknife.mdl"
+			"used_by_classes"
+			{
+				"spy"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"name"	"#TF_BlackRose_Style_TeamColors"
+					}
+					"1"
+					{
+						"skin_red"	"2"
+						"skin_blu"	"3"
+						"name"	"#TF_BlackRose_Style_Black"
+					}
+				}
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/workshop/weapons/c_models/c_ava_roseknife/c_ava_roseknife_festivizer.mdl"
+					}
+				}
+			}
+			"attributes"
+			{
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_knife_small_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+		"609" // The Scottish Handshake - reskin
+		{
+			"name"	"The Scottish Handshake"
+			"item_class"	"tf_weapon_bottle"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_festivized"		"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Bottle"
+			"item_name"	"#TF_ScottishHandshake"
+			"item_description"	"#TF_ScottishHandshake_Desc"
+			"item_logname"	"scotland_shard"
+			"item_iconname"	"scotland_shard"
+			"item_slot"	"melee"
+			"item_quality"	"normal"
+			"propername"	"1"
+			"image_inventory" "backpack/workshop/weapons/c_models/c_scotland_shard/c_scotland_shard"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 				"30"			
+			"model_player"	"models/workshop/weapons/c_models/c_scotland_shard/c_scotland_shard.mdl"
+			"attach_to_hands" "1"
+			"used_by_classes"
+			{
+				"demoman"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -14"
+			}
+			"attributes"
+			{
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/workshop/weapons/c_models/c_scotland_shard/c_scotland_shard_festivizer.mdl"
+					}
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_bottle_pickup.wav"
+			"drop_sound"		"ui/item_bottle_drop.wav"
+		}
+		"954" // Memory Maker - reskin
+		{
+			"name"	"Memory Maker"
+			"item_class"	"saxxy"
+			"prefab"	"weapon_melee_allclass"
+			"item_logname"	"memory_maker"
+			"item_iconname"	"memory_maker"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Camera"
+			"item_name"	"#TF_Memory_Maker"
+			"item_description"	"#TF_Memory_Maker_Desc"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/weapons/c_models/c_8mm_camera/c_8mm_camera"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_8mm_camera/c_8mm_camera.mdl"
+			"attach_to_hands"	"1"
+			"item_quality"	"normal"
+			"anim_slot" "MELEE_ALLCLASS"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"pyro" "1"
+			}
+			"attributes"
+			{
+				"cannot trade"	
+				{
+					"attribute_class"	"cannot_trade"
+					"value"				"1"
+				}
+			}
+			"visuals"
+			{
+				"sound_melee_hit_world"	"Weapon_Machete.HitWorld"
+				"sound_melee_miss"	"Weapon_Machete.Miss"
+				"sound_melee_hit"	"Weapon_Machete.HitFlesh"
+				"sound_burst"		"Weapon_Machete.MissCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+		"1013" // The Ham Shank - reskin
+		{
+			"name"	"The Ham Shank"
+			"item_class"	"saxxy"
+			"prefab"	"weapon_melee_allclass"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_be_festivized"		"1"
+			}
+			"item_logname"	"ham_shank"
+			"item_iconname"	"ham_shank"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Pork_Product"
+			"item_name"	"#TF_HamShank"
+			"item_description"	"#TF_HamShank_Desc"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_ham/c_ham"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 				"40"
+			"model_player"	"models/workshop/weapons/c_models/c_ham/c_ham.mdl"
+			"attach_to_hands"	"1"
+			"item_quality"	"normal"
+			"propername"	"1"
+			"anim_slot" "MELEE_ALLCLASS"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"pyro" "1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -6"
+			}
+			"visuals"
+			{
+				"sound_melee_hit"	"Weapon_HolyMackerel.HitFlesh"
+				"sound_melee_hit_world"	"Weapon_HolyMackerel.HitWorld"
+				"sound_melee_miss"	"Weapon_Machete.Miss"
+				"sound_burst"		"Weapon_Machete.MissCrit"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/workshop/weapons/c_models/c_ham/c_ham_festivizer.mdl"
+					}
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_gooey_pickup.wav"
+			"drop_sound"		"ui/item_gooey_pickup.wav"
+		}
+		"880" // The Freedom Staff - reskin
+		{
+			"name"	"The Freedom Staff"
+			"item_class"	"saxxy"
+			"prefab"	"weapon_melee_allclass"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_be_festivized"		"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Staff"
+			"item_name"	"#TF_TW_Staff"
+			"item_description"	"#TF_TW_Staff_Desc"
+			"propername"	"1"
+			"item_slot"	"melee"
+			"item_quality"	"normal"
+			"attach_to_hands"	"1"
+			"item_logname"	"freedom_staff"
+			"item_iconname"	"freedom_staff"
+			"image_inventory"	"backpack/workshop_partner/weapons/c_models/c_tw_eagle/c_tw_eagle"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 				"80"			
+			"model_player"	"models/workshop_partner/weapons/c_models/c_tw_eagle/c_tw_eagle.mdl"
+			"anim_slot" "MELEE_ALLCLASS"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"pyro" "1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"20 0 -10"
+				"inspect_viewmodel_offset"				"5 0 -18"				
+			}
+			"visuals"
+			{
+				"sound_melee_hit_world"	"Weapon_Machete.HitWorld"
+				"sound_melee_miss"	"Weapon_Machete.Miss"
+				"sound_melee_hit"	"Weapon_Machete.HitFlesh"
+				"sound_burst"		"Weapon_Machete.MissCrit"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/workshop_partner/weapons/c_models/c_tw_eagle/c_tw_eagle_festivizer.mdl"
+					}
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
+			"drop_sound"		"ui/item_wood_pole_drop.wav"
+		}
+		"474"// The Conscientious Objector - change item_description to not include text about applying custom details at some point ( - reskin )
+		{
+			"name"	"The Conscientious Objector"
+			"item_class"	"saxxy"
+			"prefab"	"weapon_melee_allclass"
+			"capabilities"
+			{
+				"can_customize_texture"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_festivized"		"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Sign"
+			"item_name"	"#TF_ConscientiousObjector"
+			"item_description"	"#TF_ConscientiousObjector_Desc"
+			"item_slot"	"melee"
+			"item_quality"	"normal"
+			"propername"	"1"
+			"attach_to_hands"	"1"
+			"item_logname"	"nonnonviolent_protest"
+			"item_iconname"	"nonnonviolent_protest"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_picket/c_picket"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 				"80"			
+			"model_player"	"models/workshop/weapons/c_models/c_picket/c_picket.mdl"
+			"anim_slot" "MELEE_ALLCLASS"
+			"armory_desc" "can_customize_texture"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"pyro" "1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -5"
+				"inspect_viewmodel_offset"				"0 0 -18"
+			}
+			"visuals"
+			{
+				"sound_melee_hit_world"	"Weapon_Machete.HitWorld"
+				"sound_melee_miss"	"Weapon_Machete.Miss"
+				"sound_melee_hit"	"Weapon_Machete.HitFlesh"
+				"sound_burst"		"Weapon_Machete.MissCrit"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/workshop/weapons/c_models/c_picket/c_picket_festivizer.mdl"
+					}
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
+			"drop_sound"		"ui/item_wood_pole_drop.wav"
+			"custom_texture_blend_steps"
+			{
+				"1"
+				{
+					"op"	"normal"
+					"image"	"scripts/items/custom_texture_blend_layers/paper_overlay.png"
+				}
+			}
+		}
+		"739" // The Lollichop - reskin
+		{
+			"name"	"The Lollichop"
+			"prefab"	"valve"
+			"item_class"	"tf_weapon_fireaxe"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+			}
+			"item_logname"	"lollichop"
+			"item_iconname"	"lollichop"
+			"show_in_armory"	"1"
+			"item_type_name"	"#tf_weapon_fireaxe"
+			"item_name"	"#TF_Lollichop"
+			"item_description"	"#TF_Lollichop_Desc"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/weapons/c_models/c_lollichop/c_lollichop"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_lollichop/c_lollichop.mdl"
+			"model_vision_filtered"		"models/weapons/c_models/c_fireaxe_pyro/c_fireaxe_pyro.mdl"
+			"attach_to_hands"	"1"
+			"item_quality"	"normal"
+			"propername"	"1"
+			"used_by_classes"
+			{
+				"pyro"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"15 2 -12"				
+			}
+			"attributes"
+			{
+				"vision opt in flags"
+				{
+					"attribute_class"	"vision_opt_in_flags"
+					"value"				"1"
+				}
+				"pyrovision only DISPLAY ONLY"
+				{
+					"attribute_class"	"pyrovision_only_display"
+					"value"				"1"
+				}
+				"pyrovision opt in DISPLAY ONLY"
+				{
+					"attribute_class" 	"pyrovision_opt_in_display_only"
+					"value"		  		"1"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_mtp_pickup.wav"
+			"drop_sound"			"ui/item_mtp_drop.wav"
+		}
+		"741" // The Rainblower - note: that there's weird missing model when taunting, or at least on my side ( - reskin )
+		{
+			"name"	"The Rainblower"
+			"item_name"	"#TF_Rainblower"
+			"item_type_name"	"#TF_Weapon_Flamethrower"
+			"item_description"	"#TF_Rainblower_Desc"
+			"item_quality"	"normal"
+			
+			"item_class"	"tf_weapon_flamethrower"
+			"item_slot"	"primary"
+			"used_by_classes"
+			{
+				"pyro"	"1"
+			}
+			
+			"model_player"	"models/weapons/c_models/c_rainblower/c_rainblower.mdl"
+			"model_vision_filtered"	"models/weapons/c_models/c_flamethrower/c_flamethrower.mdl"
+			"attach_to_hands"	"1"
+			"static_attrs"
+			{
+				"flamethrower explain"			"1"
+				"min_viewmodel_offset"					"10 0 -23"	
+
+				"flame_gravity"					"0"
+				"flame_drag"					"8.500000"
+				"flame_up_speed"				"50"
+				"flame_speed"					"2450"
+				"flame_spread_degree"			"2.800000"
+				"flame_lifetime"				"0.600000"
+				"flame_random_life_time_offset"	"0.100000"
+				"flame_velocity_fade_start"		"0.300000"
+				"flame_velocity_fade_end"		"0.500000"	
+			}
+			"item_logname"	"rainblower"
+			"item_iconname"	"rainblower"
+			"show_in_armory"	"1"
+			"propername"	"1"
+			"attributes"
+			{
+				"vision opt in flags"
+				{
+					"attribute_class"	"vision_opt_in_flags"
+					"value"				"1"
+				}
+				"lunchbox adds minicrits"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"3"
+				}
+				"pyrovision only DISPLAY ONLY"
+				{
+					"attribute_class"	"pyrovision_only_display"
+					"value"				"1"
+				}
+				"pyrovision opt in DISPLAY ONLY"
+				{
+					"attribute_class" 	"pyrovision_opt_in_display_only"
+					"value"		  		"1"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_Rainblower.Fire"			
+				"sound_special1"		"Weapon_Rainblower.FireLoop"			
+				"sound_special2"		"Weapon_Rainblower.PilotLoop"			
+				"sound_special3"		"Weapon_Rainblower.WindDown"			
+			}
+			"image_inventory"	"backpack/weapons/c_models/c_rainblower/c_rainblower"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"mouse_pressed_sound"	"ui/item_mtp_pickup.wav"
+			"drop_sound"			"ui/item_mtp_drop.wav"
+		}
+		"939"	// The Bat Outta Hell - reskin
+		{
+			"name"	"The Bat Outta Hell"
+			"item_class"	"saxxy"
+			"prefab"	"weapon_melee_allclass"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_be_festivized"		"1"
+			}
+			"item_logname"	"skullbat"
+			"item_iconname"	"skullbat"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Skullbat"
+			"item_name"	"#TF_BatOuttaHell"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_skullbat/c_skullbat"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist"        "45"
+			"model_player"	"models/workshop/weapons/c_models/c_skullbat/c_skullbat.mdl"
+			"attach_to_hands"	"1"
+			"item_quality"	"normal"
+			"propername"	"1"
+			"anim_slot" "MELEE_ALLCLASS"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"pyro" "1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -6"
+			}
+			"visuals"
+			{
+				"sound_melee_hit_world"	"Weapon_Machete.HitWorld"
+				"sound_melee_miss"	"Weapon_Machete.Miss"
+				"sound_melee_hit"	"Weapon_Machete.HitFlesh"
+				"sound_burst"		"Weapon_Machete.MissCrit"
+				"styles"
+				{
+					"0"
+					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"model_player"	"models/workshop/weapons/c_models/c_skullbat/c_skullbat.mdl"
+						"name"		"#TF_BatOuttaHell_Style0"
+					}
+					"1"
+					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"model_player"	"models/workshop/weapons/c_models/c_skullbat/c_skullbat_s1.mdl"
+						"name"		"#TF_BatOuttaHell_Style1"
+					}
+					"2"
+					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"model_player"	"models/workshop/weapons/c_models/c_skullbat/c_skullbat_s2.mdl"
+						"name"		"#TF_BatOuttaHell_Style2"
+					}
+					"3"
+					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"model_player"	"models/workshop/weapons/c_models/c_skullbat/c_skullbat_s3.mdl"
+						"name"		"#TF_BatOuttaHell_Style3"
+					}
+				}
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/workshop/weapons/c_models/c_skullbat/c_skullbat_festivizer.mdl"
+					}
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+		"30001" // LILITH - MINIGUN
+		{
+			"name"						"serider_lilith"
+			"item_class"				"tf_weapon_minigun"
+			"item_slot"					"primary"
+			"show_in_armory"			"1"
+			
+			"item_quality"				"unique"
+			"item_name"					"Lilith"
+			"item_type_name"			"#TF_Weapon_Minigun"
+			"item_description"			"Kill the ones who want peace."
+
+			"image_inventory"		"backpack/weapons/w_models/w_minigun"
+			"model_player"		"models/weapons/v_models/v_minigun_heavy.mdl"
+			"model_world"		"models/weapons/w_models/w_minigun.mdl"
+			"attach_to_hands"			"2"
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -9"
+				"provide on active"		"1"
+			}
+            "attributes"
+            {
+                "mod mini-crit airborne"
+                {
+                    "attribute_class"    "mini_crit_airborne"
+                    "value"    "1"
+                }
+				"critboost on kill"
+                {
+                    "attribute_class"    "add_onkill_critboost_time"
+                    "value"    "1"
+                }
+                "healing received penalty"
+                {
+                    "attribute_class"    "mult_healing_received"
+                    "value"    "0.6"
+                }
+                "no primary ammo from dispensers while active"
+                {
+                    "attribute_class"    "no_primary_ammo_from_dispensers"
+                    "value"    "1"
+                }
+				"max health additive penalty"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value"		"-150"
+				}
+				"crits_become_minicrits"
+				{
+					"attribute_class"	"crits_become_minicrits"
+					"value"		"1"
+				}
+            }
+			"mouse_pressed_sound"		"#ui/item_crate_drop.wav"
+			"drop_sound"				"#ui/item_crate_pickup.wav"
+		}
+		"30002" // Fire Retardant - beta content
+		{
+			"name"				"fire_retardant"
+			"item_name"			"Fire Retardant"
+			"item_type_name"	"#TF_Wearable_Suit"
+			"item_description"	"Ok guys, bad news: we lost that last one."
+			"item_quality"		"unique"
+
+			"item_class"	"tf_wearable"
+			"item_slot"		"secondary"
+			"used_by_classes"
+			{
+				"Spy"	"1"
+			}
+			"attributes"
+			{
+				"dmg taken from fire reduced"
+				{
+					"attribute_class"	"mult_dmgtaken_from_fire"
+					"value" "0.10"
+				}
+			}
+			"act_as_wearable"	"1"
+			"anim_slot"			"FORCE_NOT_USED"
+			"equip_region"		"spy_coat"
+			"image_inventory"		"backpack/player/items/spy/firesuit"
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"			"ui/item_light_gun_drop.wav"
+		}
+	}
+}
