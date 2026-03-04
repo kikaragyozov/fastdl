@@ -1204,6 +1204,65 @@
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
+		"3367" // The Sandman (February 2009 original)
+		{
+			"name"						"TF_WEAPON_SANDMAN"
+			"item_class"				"tf_weapon_bat_wood"
+			"item_slot"					"melee"
+			"anim_slot"					"melee"
+			"show_in_armory"			"1"
+
+			"propername"				"1"
+			"item_name"					"The Sandman"
+			"item_type_name"			"Bat"
+			"item_description"			"Alt-Fire: Launches a baseball that stuns enemies.
+
+The ball stunned people all along! Back when
+Scout never got his health taken away for it.
+
+-February 2009-"
+			"item_logname"				"sandman"
+			"item_iconname"				"sandman"
+			"image_inventory"			"backpack/weapons/w_models/w_bat"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_name_color"			"190 200 233 255"
+
+			"model_player"				"models/weapons/v_models/v_bat_scout.mdl"
+			"model_world"				"models/weapons/w_models/w_bat.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"scout"					"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -9"
+			}
+			"attributes"
+			{
+				"no double jump"
+				{
+					"attribute_class"	"set_scout_doublejump_disabled"
+					"value"				"1"
+				}
+				"mod use custom ammo type"
+				{
+					"attribute_class"	"mod_use_custom_ammo_type"
+					"value"				"5"
+				}
+			}
+			"visuals"
+			{
+				"sound_deploy"			"Weapon_Bat.Draw"
+				"sound_single_shot"		"Weapon_Bat.HitFlesh"
+				"sound_melee_hit"		"Weapon_Bat.HitFlesh"
+				"sound_melee_hit_world"	"Weapon_Bat.HitWorld"
+				"sound_special1"		"TFPlayer.StunImpact"
+			}
+			"mouse_pressed_sound"		"#ui/item_metal_weapon_pickup.wav"
+			"drop_sound"				"#ui/item_metal_weapon_drop.wav"
+		}
 		"30001" // LILITH - MINIGUN
 		{
 			"name"						"serider_lilith"
