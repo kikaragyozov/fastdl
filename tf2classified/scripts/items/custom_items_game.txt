@@ -1215,12 +1215,7 @@
 			"propername"				"1"
 			"item_name"					"The Sandman"
 			"item_type_name"			"Bat"
-			"item_description"			"Alt-Fire: Launches a baseball that stuns enemies.
-
-The ball stunned people all along! Back when
-Scout never got his health taken away for it.
-
--February 2009-"
+			"item_description"			"Alt-Fire: Launches a baseball that stuns enemies."
 			"item_logname"				"sandman"
 			"item_iconname"				"sandman"
 			"image_inventory"			"backpack/weapons/w_models/w_bat"
